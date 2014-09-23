@@ -22,7 +22,7 @@ else
         cmake . -DRUN_IN_PLACE=1
         make -j2
         if test -d "/var/mt/minetest/"; then
-                mv /var/mt/minetes /var/mt/mt-copy
+                mv /var/mt/minetest /var/mt/mt-copy
                 mkdir -p /var/mt/minetest
                 mv /var/mt/mt-copy /var/mt/minetest/copy-${TIME}
         fi
