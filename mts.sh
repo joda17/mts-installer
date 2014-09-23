@@ -4,15 +4,15 @@ TIME = $(date +"%m-%d-%Y-%T")
 
 mkdir -p /var/mt
 mkdir -p /var/mt/minetest
-mkdir -p /var/mt/build
 
 if test -f "/var/mt/minetest/update"; then
         /var/mt/minetest/bin/minetestserver
 else
+        rm -f /var/mt/build
         cd /var/mt/
         wget https://github.com/minetest/minetest/tarball/master -O master.tar.gz
         tar xf master.tar.gz
-        mv /var/mt/minetest-minetest-* /var/mt/build
+        mv /var/mt/minetest-minetest-*/ /var/mt/build/
         mkdir -p /var/mt/build/games
         cd /var/mt/build/games
         wget https://github.com/minetest/minetest_game/tarball/master -O minetest_game.tar.gz
