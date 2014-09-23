@@ -17,7 +17,7 @@ else
         cd /var/mt/build/games
         wget https://github.com/minetest/minetest_game/tarball/master -O minetest_game.tar.gz
         tar xf minetest_game.tar.gz
-        mv /var/mt/build/games/minetest-minetest_game-*/ /var/mt/build/games/minetest_game/
+        mv /var/mt/build/games/minetest-minetest_game-* /var/mt/build/games/minetest_game
         cd ../
         cmake . -DRUN_IN_PLACE=1
         make -j2
