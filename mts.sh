@@ -12,7 +12,7 @@ else
         cd /var/mt/
         wget https://github.com/minetest/minetest/tarball/master -O master.tar.gz
         tar xf master.tar.gz
-        /var/mt/minetest-minetest-*/ /var/mt/build/
+        mv /var/mt/minetest-minetest-*/ /var/mt/build/
         cd /var/mt/build/games
         wget https://github.com/minetest/minetest_game/tarball/master -O minetest_game.tar.gz
         tar xf minetest_game.tar.gz
