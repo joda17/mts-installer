@@ -6,7 +6,7 @@ mkdir -p /var/mt
 mkdir -p /var/mt/minetest
 mkdir -p /var/mt/build
 
-if test -f "/var/mt/minetest/bin/minetestserver"; then
+if test -f "/var/mt/minetest/update"; then
         /var/mt/minetest/bin/minetestserver
 else
         cd /var/mt/
@@ -26,4 +26,7 @@ else
                 mv /var/mt/mt-copy/ /var/mt/minetest/copy-${TIME}/
         fi
         cp -R /var/mt/build/* /var/mt/minetest
+        touch /var/mt/minetest/update
+        chmod -R 777 /var/mt/minetest
+        chmod -R 444 /var/mt/minetest/bin
 fi
