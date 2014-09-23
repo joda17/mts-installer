@@ -29,5 +29,5 @@ else
         cp -R /var/mt/build/* /var/mt/minetest
         touch /var/mt/minetest/update
         chmod -R 777 /var/mt/minetest
-        chmod -R 444 /var/mt/minetest/bin
+        chmod -R 744 /var/mt/minetest/bin
 fi
